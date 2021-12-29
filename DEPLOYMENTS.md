@@ -7,6 +7,7 @@
 | [feat/past-boards-webpage](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/past-boards-webpage) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-past-boards-webpage) |
 | [feat/project-updates](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/project-updates) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-project-updates) |
 | [feat/projects-list](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/projects-list) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-projects-list) |
+| [feat/test-deployment/2](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/test-deployment/2) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-test-deployment-2) |
 | [fix/governance](https://github.com/visortelle/haskellfoundation.github.io/tree/fix/governance) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/fix-governance) |
 | [gh-pages](https://github.com/visortelle/haskellfoundation.github.io/tree/gh-pages) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/gh-pages) |
 | [github-pages](https://github.com/visortelle/haskellfoundation.github.io/tree/github-pages) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/github-pages) |
