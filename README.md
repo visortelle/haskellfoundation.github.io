@@ -15,7 +15,7 @@ This repository is for the [haskell.foundation](https://haskell.foundation) webs
   - [Building](#building)
   - [CI](#ci)
   - [License](#license)
-
+  - [Dev Deployments List](https://github.com/haskellfoundation/haskellfoundation.github.io/blob/gh-pages/DEPLOYMENTS.md)
 
 ## Building
 
