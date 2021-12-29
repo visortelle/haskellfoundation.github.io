@@ -4,6 +4,7 @@
 | --- | --- |
 | [main](https://github.com/visortelle/haskellfoundation.github.io/tree/) | [Open](https://visortelle.github.io/haskellfoundation.github.io/) |
 | [careers](https://github.com/visortelle/haskellfoundation.github.io/tree/careers) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/careers) |
+| [feat/strange/branch/name](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/strange/branch/name) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-strange-branch-name) |
 | [gh-pages](https://github.com/visortelle/haskellfoundation.github.io/tree/gh-pages) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/gh-pages) |
 | [hakyll](https://github.com/visortelle/haskellfoundation.github.io/tree/hakyll) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/hakyll) |
 | [main](https://github.com/visortelle/haskellfoundation.github.io/tree/main) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/main) |
