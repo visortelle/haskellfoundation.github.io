@@ -4,6 +4,7 @@
 | --- | --- |
 | [main](https://github.com/visortelle/haskellfoundation.github.io/tree/) | [Open](https://visortelle.github.io/haskellfoundation.github.io/) |
 | [careers](https://github.com/visortelle/haskellfoundation.github.io/tree/careers) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/careers) |
+| [feat/a/b/c/test](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/a/b/c/test) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-a-b-c-test) |
 | [feat/past-boards-webpage](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/past-boards-webpage) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-past-boards-webpage) |
 | [feat/project-updates](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/project-updates) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-project-updates) |
 | [feat/projects-list](https://github.com/visortelle/haskellfoundation.github.io/tree/feat/projects-list) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/feat-projects-list) |
