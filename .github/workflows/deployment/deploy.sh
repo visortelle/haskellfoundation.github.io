@@ -7,6 +7,12 @@ set -eo pipefail
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source $script_dir/commons.sh
 
+# Monkey patch html files by adding <meta name="robots" content="noindex, nofollow">.
+# It will tell search bots like googlebot not to index this content.
+search_robots_noindex() {
+  # find
+}
+
 deploy() {
   if [[ ! -z "$GITHUB_REF_NAME" ]]; then
     # The GITHUB_REF_NAME env variable is available in github actions.
