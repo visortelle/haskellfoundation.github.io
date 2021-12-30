@@ -1,0 +1,16 @@
+name: Branch Deleted
+
+on: delete
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: gh-pages
+
+      - name: Remove stale deployments
+        run: ./.github/workflows/deployment/delete.sh $GITHUB_REF_NAME

@@ -4,18 +4,11 @@
 
 set -eo pipefail
 
-git_repo_root=$(git rev-parse --show-toplevel)
-site_src="${git_repo_root}/_site"
-gh_pages_root="${git_repo_root}/docs"
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+source $script_dir/commons.sh
 
-# Site built from the main branch will be available at 'https://<domain_name>/'.
-# Sites built from other branchs will be available at 'https://<domain_name>/branches/<branch_name>'.
-main_git_branch="hakyll"
-
-# replace "/", "#", etc with "-".
-slugify() {
-  echo "$1" | iconv -c -t ascii//TRANSLIT | sed -E 's/[~^]+/-/g' | sed -E 's/[^a-zA-Z0-9]+/-/g' | sed -E 's/^-+|-+$/-/g' | tr A-Z a-z
-}
+git config user.name github-actions
+git config user.email github-actions@github.com
 
 deploy() {
   if [[ ! -z "$GITHUB_REF_NAME" ]]; then
@@ -26,17 +19,14 @@ deploy() {
   fi
   echo "Current git branch is '${git_branch}'."
 
-  git config user.name github-actions
-  git config user.email github-actions@github.com
-
   git checkout gh-pages
   git pull origin gh-pages
 
   if [ "$git_branch" == "$main_git_branch" ]; then
-    site_dest="${gh_pages_root}"
+    site_dest="${gh_pages_dir}"
 
     # Create temporary backup for other branches content.
-    mv "${gh_pages_root}/branches" .
+    mv "${deployments_dir}" .
 
     # Replace site files.
     rm -rf "${site_dest}"
@@ -44,9 +34,10 @@ deploy() {
     cp -a -v ${site_src}/* ${site_dest}/
 
     # Restore temporary backup for other branches content.
-    mv ./branches "${gh_pages_root}/"
+    mv ./branches "${gh_pages_dir}/"
   else
-    site_dest="${gh_pages_root}/branches/$(slugify ${git_branch})"
+    branch_slug=$(slugify $git_branch)
+    site_dest="${gh_pages_dir}/branches/${branch_slug}"
 
     # Replace site files.
     rm -rf "${site_dest}"
@@ -86,10 +77,10 @@ update_deployments_list() {
   main_deployment_url="https://${github_repo_owner}.github.io/${github_repo_name}/"
   echo "| [${main_git_branch}](https://github.com/${github_repo_owner}/${github_repo_name}/tree/${branch}) | [Open](${main_deployment_url}) |" >>$deployments_list
 
-  remote_branches=$( git ls-remote --heads origin | sed 's?.*refs/heads/??' | grep -v "gh-pages" | grep -v "${main_git_branch}")
+  remote_branches=$(git ls-remote --heads origin | sed 's?.*refs/heads/??' | grep -v "gh-pages" | grep -v "${main_git_branch}")
   echo "$remote_branches" | while IFS= read -r branch; do
-    safe_branch=$(slugify $branch)
-    deployment_url="https://${github_repo_owner}.github.io/${github_repo_name}/branches/${safe_branch}"
+    branch_slug=$(slugify $branch)
+    deployment_url="https://${github_repo_owner}.github.io/${github_repo_name}/branches/${branch_slug}"
     echo "| [${branch}](https://github.com/${github_repo_owner}/${github_repo_name}/tree/${branch}) | [Open](${deployment_url}) |" >>$deployments_list
   done
 
