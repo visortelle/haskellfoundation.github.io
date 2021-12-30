@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 0
           ref: hakyll
 
-      - name: Remove stale deployments
+      - name: Remove deployment for deleted branch
         run: |
           ./.github/workflows/deployment/delete.sh ${{ github.event.ref }}
           ./.github/workflows/deployment/update-deployments-list.sh
