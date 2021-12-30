@@ -13,4 +13,6 @@ jobs:
           ref: hakyll
 
       - name: Remove stale deployments
-        run: ./.github/workflows/deployment/delete.sh ${{ github.event.ref }}
+        run: |
+          ./.github/workflows/deployment/delete.sh ${{ github.event.ref }}
+          ./.github/workflows/deployment/update-deployments-list.sh
