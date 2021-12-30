@@ -7,3 +7,4 @@
 | [deployment-1](https://github.com/visortelle/haskellfoundation.github.io/tree/deployment-1) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/deployment-1) |
 | [deployment-2](https://github.com/visortelle/haskellfoundation.github.io/tree/deployment-2) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/deployment-2) |
 | [gh23-deployment](https://github.com/visortelle/haskellfoundation.github.io/tree/gh23-deployment) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/gh23-deployment) |
+| [one-more-branch](https://github.com/visortelle/haskellfoundation.github.io/tree/one-more-branch) | [Open](https://visortelle.github.io/haskellfoundation.github.io/branches/one-more-branch) |
