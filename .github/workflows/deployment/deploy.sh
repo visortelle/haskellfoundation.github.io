@@ -7,9 +7,6 @@ set -eo pipefail
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source $script_dir/commons.sh
 
-git config user.name github-actions
-git config user.email github-actions@github.com
-
 deploy() {
   if [[ ! -z "$GITHUB_REF_NAME" ]]; then
     # The GITHUB_REF_NAME env variable is available in github actions.
@@ -47,7 +44,7 @@ deploy() {
 
   echo "Updating gh-pages branch."
   git add --all
-  git commit --allow-empty -m "[$(date '+%F %T %Z')] Updated site for the '${git_branch}' branch [ci skip]"
+  git commit --allow-empty -m "Update '${git_branch}' branch deployment [ci skip]"
   git push --force origin gh-pages
   echo "Deployment finished."
 }
@@ -86,7 +83,7 @@ update_deployments_list() {
 
   # Update gh-pages branch
   git add --all
-  git commit --allow-empty -m "Update ${deployments_list}"
+  git commit --allow-empty -m "Update ${deployments_list} [ci skip]"
   git push --force origin gh-pages
 }
 
