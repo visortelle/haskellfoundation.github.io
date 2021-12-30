@@ -15,6 +15,6 @@ rm -rf "$deployments_dir/$branch_slug"
 
 echo "Updating gh-pages branch."
 git add --all
-git commit --allow-empty -m "Delete '${$1}' branch deployment [ci skip]"
+git commit --allow-empty -m "Delete '$1' branch deployment [ci skip]"
 git push --force origin gh-pages
 echo "Deployment for branch '$1' has been deleted."
