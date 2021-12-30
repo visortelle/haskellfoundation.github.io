@@ -54,3 +54,4 @@ deploy() {
 }
 
 deploy
+update_deployments_list

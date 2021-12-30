@@ -50,4 +50,3 @@ jobs:
       - name: Deploy site
         run: |
           ./.github/workflows/deployment/deploy.sh
-          ./.github/workflows/deployment/update-deployments-list.sh
