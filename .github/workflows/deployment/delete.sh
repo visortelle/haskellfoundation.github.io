@@ -10,7 +10,7 @@ source $script_dir/commons.sh
 git checkout gh-pages
 git pull origin gh-pages
 
-branch_slug=$($script_dir/slugify.sh $1)
+branch_slug=$(slugify $1)
 rm -rf "$deployments_dir/$branch_slug"
 
 echo "Updating gh-pages branch."
