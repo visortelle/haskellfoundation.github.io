@@ -35,7 +35,7 @@ deploy() {
   else
     # Patch html files to tell search engine bots like google-bot not to index this content.
     # More info: https://developers.google.com/search/docs/advanced/crawling/block-indexing
-    find $site_src -name '*.html' -exec sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/g' {}
+    find $site_src -name '*.html' -exec sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/g' {} \;
 
     branch_slug=$(slugify $git_branch)
     site_dest="${gh_pages_dir}/branches/${branch_slug}"
